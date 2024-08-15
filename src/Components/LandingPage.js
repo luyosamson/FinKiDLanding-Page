@@ -9,6 +9,17 @@ import DeliveryMeals from "../Assets/delivery-image.png";
 import { FiArrowRight } from "react-icons/fi";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 
+import Profile1 from "../Assets/profile.jpeg"
+import Profile2 from "../Assets/profile2.png"
+import Profile3 from "../Assets/profile3.png"
+import Profile4 from "../Assets/peris.jpg"
+import Profile5 from "../Assets/profile5.jpg"
+
+
+import { BsTwitter } from "react-icons/bs";
+import { SiLinkedin } from "react-icons/si";
+import { BsYoutube } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 const LandingPage = () => {
   const workInfoData = [
     {
@@ -28,6 +39,40 @@ const LandingPage = () => {
     },
   ];
 
+  // Team Profile
+  const teams = [
+    {
+      image: Profile1,
+      name:"Your Name",
+      title: "Financial Expert",
+      
+    },
+    {
+      image: Profile2,
+      name:"Your Name",
+      title: "Software Developer",
+      
+    },
+    {
+      image: Profile3,
+      name:"Your Name",
+      title: "Software Developer",
+     
+    },
+    {
+      image: Profile4,
+      name:"Your Name",
+      title: "Digital marketer",
+      
+    },
+    {
+      image: Profile5,
+      name:"Your Name",
+      title: "Project Manager",
+      
+    },
+  ];
+
   return (
     <div>
       {/* Home Section */}
@@ -39,12 +84,20 @@ const LandingPage = () => {
           <div className="home-text-section">
             <h3 className="primary-heading">Financial Literacy Meets Fun</h3>
             <p className="primary-text">
-              Healthy switcher chefs do all the prep work, like peeling, chopping,
-              & marinating, so you can cook fresh food.
+            At Finkid, we believe that learning about money should be as fun as playing a game. 
+            That's why we've combined financial literacy with engaging, 
+            interactive activities, making it easy and enjoyable for kids to understand the basics of money management.
             </p>
             <button className="secondary-button">
               Explore More <FiArrowRight />{" "}
             </button>
+            <div className="footer-icons">
+          <BsTwitter />
+          <SiLinkedin />
+          <BsYoutube />
+          <FaFacebookF />
+        
+        </div>
           </div>
           <div className="home-image-section">
             <img src={BannerImage} alt="Banner" />
@@ -100,6 +153,27 @@ const LandingPage = () => {
               </div>
               <h2>{data.title}</h2>
               <p>{data.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+            {/* Project Team Section*/}
+            <div id="work" className="work-section-wrapper">
+        <div className="work-section-top">
+          <p className="primary-subheading">Team</p>
+          {/* <h1 className="primary-heading">How It Works</h1> */}
+          <p className="primary-text">
+            FinKid Team
+          </p>
+        </div>
+        <div className="work-section-bottom">
+          {teams.map((data) => (
+            <div className="work-section-info" key={data.title}>
+              <div className="info-boxes-img-container">
+                <img src={data.image} alt={data.title} />
+              </div>
+              <h2>{data.name}</h2>
+              <p>{data.title}</p>
             </div>
           ))}
         </div>

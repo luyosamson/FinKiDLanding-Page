@@ -57,10 +57,11 @@ const Navbar = () => {
       <div className="nav-logo-container">
         <img src={Logo} alt="Finkid" />
       </div>
-      <div className="navbar-links-container">
+  <div className="navbar-links-container">
   <a href="#home" className="navbar-link">Home</a>
   <a href="#about" className="navbar-link">About Us</a>
   <a href="#work" className="navbar-link">Our Work</a>
+  <a href="#work" className="navbar-link">Team</a>
   <a href="#contact" className="navbar-link">Contact</a>
       </div>
       <div className="navbar-menu-container">
