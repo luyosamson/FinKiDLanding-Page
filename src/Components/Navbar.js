@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React, { useState } from "react";
 import Logo from "../Assets/FINKID.png";
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -14,40 +14,54 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-
+import { NavLink } from 'react-router-dom';
+import {Link} from 'react-scroll'
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
+      id:1,
       text: "Home",
       icon: <HomeIcon />,
+      link: "home"
     },
     {
+      id:2,
       text: "About Us",
       icon: <InfoIcon />,
+      link: "about"
+    },
+    { 
+      id:3,
+      text: "Our Work",
+      icon: <CommentRoundedIcon />,
+      link: "work"
     },
     {
+      id:4,
       text: "The Team",
       icon: <CommentRoundedIcon />,
+      link: "team"
     },
     {
+      id:5,
       text: "Contact Us",
       icon: <PhoneRoundedIcon />,
+      link: "contact"
     },
-   
   ];
+
   return (
     <nav>
       <div className="nav-logo-container">
         <img src={Logo} alt="Finkid" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Home</a>
-        <a href="">About Us</a>
-        <a href="">Our Work</a>
-        <a href="">The Team</a>
-        <a href="">Contact</a>
+  <a href="#home" className="navbar-link">Home</a>
+  <a href="#about" className="navbar-link">About Us</a>
+  <a href="#work" className="navbar-link">Our Work</a>
+  <a href="#contact" className="navbar-link">Contact</a>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
@@ -62,7 +76,7 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
+                <ListItemButton component={NavLink} to={item.path}>
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItemButton>

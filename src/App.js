@@ -1,20 +1,18 @@
+
+
+import React from "react";
+import Navbar from "./Components/Navbar";
+import LandingPage from "./Components/LandingPage";
 import "./App.css";
-import Home from "./Components/Home";
-import About from "./Components/About";
-import Work from "./Components/Work";
-import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <About />
-      <Work />
-      <Contact />
-      <Footer />
+      <Navbar />
+      <LandingPage />
+      <Footer/>
     </div>
   );
 }
-
 export default App;
