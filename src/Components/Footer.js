@@ -36,10 +36,7 @@ const Footer = () => {
           <span>Terms & Conditions</span>
           <span>Privacy Policy</span>
         </div>
-        <div className="contact-form-container">
-          <input type="text" placeholder="yourmail@gmail.com" />
-          <button className="secondary-button">Submit</button>
-        </div>
+    
       </div>
     </div>
   );

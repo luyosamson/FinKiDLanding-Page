@@ -115,16 +115,16 @@ const LandingPage = () => {
         </div>
         <div className="about-section-text-container">
           <p className="primary-subheading">About</p>
-          <h1 className="primary-heading">
-            Food Is An Important Part Of A Balanced Diet
-          </h1>
+          <h4 className="primary-heading">
+          Empowering the Next Generation Through Financial Literacy
+          </h4> 
           <p className="primary-text">
-            Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
-            elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
+
           </p>
           <p className="primary-text">
-            Non tincidunt magna non et elit. Dolor turpis molestie dui magnis
-            facilisis at fringilla quam.
+At FinKid, our mission is to empower children with essential financial literacy skills for a sustainable future. 
+We've developed an innovative digital platform designed to make learning about money management engaging and accessible for children aged 6-16. 
+
           </p>
           <div className="about-buttons-container">
             <button className="secondary-button">Learn More</button>
