@@ -269,7 +269,7 @@ nav {
 .testimonial-section-bottom h2 {
   margin-top: 1.5rem;
 }
-.work-section-wrapper {
+/* .work-section-wrapper {
   margin-top: 15rem;
 }
 .work-section-top p {
@@ -314,7 +314,64 @@ nav {
   display: flex;
   align-items: center;
   font-weight: 600;
+} */
+
+.work-section-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
+
+.work-section-bottom {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.work-section-info {
+  min-width: 30%;
+  flex: 1;
+  margin: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.info-boxes-img-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-button.left {
+  left: 10px;
+}
+
+.slider-button.right {
+  right: 10px;
+}
+
+.slider-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 @media (max-width: 1000px) {
   .navbar-links-container a {

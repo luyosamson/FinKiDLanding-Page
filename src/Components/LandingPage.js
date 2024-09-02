@@ -73,6 +73,20 @@ const LandingPage = () => {
     },
   ];
 
+  const handleSlideLeft = () => {
+    document.querySelector('.work-section-bottom').scrollBy({
+      left: -300, // Adjust based on your card width
+      behavior: 'smooth',
+    });
+  };
+
+  const handleSlideRight = () => {
+    document.querySelector('.work-section-bottom').scrollBy({
+      left: 300, // Adjust based on your card width
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div>
       {/* Home Section */}
@@ -136,19 +150,19 @@ We've developed an innovative digital platform designed to make learning about m
       </div>
 
       {/* Work Section */}
-      <div id="work" className="work-section-wrapper">
-        <div className="work-section-top">
-          <p className="primary-subheading">Work</p>
-          <h1 className="primary-heading">How It Works</h1>
-          <p className="primary-text">
+      <div id="work" className="worksection-wrapper">
+        <div className="worksection-top">
+          <p className="primarysubheading">Work</p>
+          <h1 className="primaryheading">How It Works</h1>
+          <p className="primarytext">
             Lorem ipsum dolor sit amet consectetur. Non tincidunt magna non et
             elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
           </p>
         </div>
-        <div className="work-section-bottom">
+        <div className="worksection-bottom">
           {workInfoData.map((data) => (
-            <div className="work-section-info" key={data.title}>
-              <div className="info-boxes-img-container">
+            <div className="work-sectioninfo" key={data.title}>
+              <div className="infoboxes-img-container">
                 <img src={data.image} alt={data.title} />
               </div>
               <h2>{data.title}</h2>
@@ -162,21 +176,28 @@ We've developed an innovative digital platform designed to make learning about m
         <div className="work-section-top">
           <p className="primary-subheading">Team</p>
           {/* <h1 className="primary-heading">How It Works</h1> */}
-          <p className="primary-text">
+          <p className="primartext">
             FinKid Team
           </p>
         </div>
-        <div className="work-section-bottom">
-          {teams.map((data) => (
-            <div className="work-section-info" key={data.title}>
-              <div className="info-boxes-img-container">
-                <img src={data.image} alt={data.title} />
-              </div>
-              <h2>{data.name}</h2>
-              <p>{data.title}</p>
-            </div>
-          ))}
+
+<div className="work-section-wrapper">
+  <button className="slider-button left" onClick={handleSlideLeft}>&lt;</button>
+  <div className="work-section-bottom">
+    {teams.map((data, index) => (
+      <div className="work-section-info" key={index}>
+        <div className="info-boxes-img-container">
+          <img src={data.image} alt={data.title} />
         </div>
+        <h2>{data.name}</h2>
+        <p>{data.title}</p>
+      </div>
+    ))}
+  </div>
+  
+  <button className="slider-button right" onClick={handleSlideRight}>&gt;</button>
+</div>
+s
       </div>
 
       {/* Contact Section */}
