@@ -202,13 +202,30 @@ s
 
       {/* Contact Section */}
       <div id="contact" className="contact-page-wrapper">
-        <h1 className="primary-heading">Have Question In Mind?</h1>
-        <h1 className="primary-heading">Let Us Help You</h1>
-        <div className="contact-form-container">
-          <input type="text" placeholder="yourmail@gmail.com" />
-          <button className="secondary-button">Submit</button>
-        </div>
-      </div>
+  <div className="contact-info-container">
+    <h2 className="contact-info-heading">Contact Information</h2>
+    <p><strong>Address:</strong> 1234 Street Name, City, Country</p>
+    <p><strong>Phone:</strong> (123) 456-7890</p>
+    <p><strong>Email:</strong> info@example.com</p>
+  </div>
+  
+  <div className="contact-form-container">
+    <h1 className="primary-heading">Send Us a Message</h1>
+    <form className="contact-form">
+      <label htmlFor="full-name">Full Name</label>
+      <input type="text" id="full-name" placeholder="Your Full Name" />
+      
+      <label htmlFor="email">Email</label>
+      <input type="email" id="email" placeholder="yourmail@example.com" />
+      
+      <label htmlFor="message">Message</label>
+      <textarea id="message" placeholder="Type your message here..." rows="5"></textarea>
+      
+      <button type="submit" className="secondary-button">Send</button>
+    </form>
+  </div>
+</div>
+
     </div>
   );
 };
