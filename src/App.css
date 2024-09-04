@@ -173,7 +173,7 @@ nav {
   font-size: 3rem;
   margin-right: 1rem;
 }
-.contact-page-wrapper h1 {
+/* .contact-page-wrapper h1 {
   max-width: 900px !important;
 }
 .contact-page-wrapper {
@@ -200,7 +200,82 @@ nav {
   outline: none;
   font-size: 1.3rem;
   padding: 0.5rem 1rem;
+} */
+
+.contact-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f9f9f9;
 }
+
+.contact-info-container {
+  flex: 1;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.contact-info-heading {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-info-container p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form-container {
+  flex: 2;
+}
+
+.primary-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
+}
+
+.secondary-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.secondary-button:hover {
+  background-color: #0056b3;
+}
+
 .footer-wrapper {
   margin: 6rem 0rem;
   display: flex;
