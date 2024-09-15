@@ -9,10 +9,10 @@ import DeliveryMeals from "../Assets/delivery-image.png";
 import { FiArrowRight } from "react-icons/fi";
 import { BsFillPlayCircleFill } from "react-icons/bs";
 
-import Profile1 from "../Assets/profile.jpeg"
-import Profile2 from "../Assets/profile2.png"
-import Profile3 from "../Assets/profile3.png"
-import Profile4 from "../Assets/peris.jpg"
+import Profile1 from "../Assets/peris.jpeg"
+import Profile2 from "../Assets/amon.jpeg"
+import Profile3 from "../Assets/sam.jpeg"
+import Profile4 from "../Assets/nester.jpeg"
 import Profile5 from "../Assets/profile5.jpg"
 
 
@@ -43,32 +43,32 @@ const LandingPage = () => {
   const teams = [
     {
       image: Profile1,
-      name:"Your Name",
-      title: "Financial Expert",
+      name:"Peris",
+      title: "Project Manager",
       
     },
     {
       image: Profile2,
-      name:"Your Name",
+      name:"Amon",
       title: "Software Developer",
       
     },
     {
       image: Profile3,
-      name:"Your Name",
+      name:"Luyo Samson",
       title: "Software Developer",
      
     },
     {
       image: Profile4,
-      name:"Your Name",
+      name:"Nester",
       title: "Digital marketer",
       
     },
     {
       image: Profile5,
       name:"Your Name",
-      title: "Project Manager",
+      title: "Financial Expert",
       
     },
   ];
